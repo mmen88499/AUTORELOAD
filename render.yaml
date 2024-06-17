@@ -3,7 +3,7 @@ services:
     name: my-iframe-app
     source: .
     runtime: go
-    rootDir: backend
+    rootDir: index.php
     env: production
     buildCommand: uu
     startCommand: php -S 0.0.0.0:8000 -t public index.php 
