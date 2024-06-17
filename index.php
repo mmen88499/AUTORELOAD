@@ -1,14 +1,29 @@
+<?php
+
+$iframeUrl = getenv('IFRAME_URL');
+$iframeDuration = getenv('IFRAME_DURATION');
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Auto-Reloading Page</title>
-  <meta http-equiv="refresh" content="5">
+  <title>Iframe Example</title>
 </head>
 <body>
 
-  <h1>This page will reload automatically every 5 seconds.</h1>
+  <iframe 
+    src="<?php echo $iframeUrl; ?>" 
+    width="640" height="360" 
+    allowfullscreen 
+    style="border: none;">
+  </iframe>
 
-  <iframe src="https://tpr-store.blogspot.com/2024/04/Java-code-to-improve-mobile-phone-performance.html" width="800" height="600"></iframe>
+  <script>
+    setTimeout(function() {
+      window.location.href = '/'; //  أعد توجيه المستخدم إلى الصفحة الرئيسية بعد انتهاء مدة iframe
+    }, <?php echo $iframeDuration * 1000; ?>); //  تحويل الثواني إلى مللي ثوانٍ
+  </script>
 
 </body>
 </html>
