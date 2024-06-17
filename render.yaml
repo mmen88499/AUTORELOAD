@@ -3,7 +3,7 @@ services:
     name: my-iframe-app
     source: .
     env: production
-    buildCommand:  # إذا لزم الأمر
+    buildCommand: uu
     startCommand: php -S 0.0.0.0:8000 -t public index.php 
     envVars:
       IFRAME_URL: "https://www.youtube.com/embed/dQw4w9WgXcQ" #  الرابط لـ iframe
