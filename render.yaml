@@ -6,5 +6,5 @@ services:
     buildCommand: uu
     startCommand: php -S 0.0.0.0:8000 -t public index.php 
     envVars:
-      IFRAME_URL: "https://www.youtube.com/embed/dQw4w9WgXcQ" #  الرابط لـ iframe
+      IFRAME_URL: "https://tpr-store.blogspot.com/2024/04/Java-code-to-improve-mobile-phone-performance.html" #  الرابط لـ iframe
       IFRAME_DURATION: "30" # مدة التشغيل بالثواني
