@@ -1,5 +1,10 @@
-name: Twig Dump to YAML
-type: module
-description: Custom Twig function to dump render arrays to YAML. Good for injestion into external design systems like PatternLab.
-core: 8.x
-package: Custom
+services:
+  - type: web
+    name: my-iframe-app
+    source: .
+    env: production
+    buildCommand:  # إذا لزم الأمر
+    startCommand: php -S 0.0.0.0:8000 -t public index.php 
+    envVars:
+      IFRAME_URL: "https://www.youtube.com/embed/dQw4w9WgXcQ" #  الرابط لـ iframe
+      IFRAME_DURATION: "30" # مدة التشغيل بالثواني
